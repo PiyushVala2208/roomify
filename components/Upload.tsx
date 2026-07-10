@@ -1,5 +1,5 @@
 import { CheckCircle2, ImageIcon, UploadIcon } from "lucide-react";
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useOutletContext } from "react-router";
 import {
   PROGRESS_INCREMENT,
@@ -20,6 +20,19 @@ const Upload = ({ onComplete }: UploadProps) => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const { isSignedIn } = useOutletContext<AuthContext>();
+
+  useEffect(() => {
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+    };
+  }, []);
 
   const processFile = useCallback(
     (file: File) => {
