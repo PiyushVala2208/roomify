@@ -1,95 +1,79 @@
-# Welcome to React Router!
+# Roomify 🛋️✨
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Roomify is an AI-powered interior design and 3D visualization tool that lets you seamlessly transform your spaces. Built for modern web experiences, it allows users to upload a photo of a room, process it, and dynamically compare the original vs. the AI-rendered version.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+🌐 **Live Demo:** [Roomify on Puter](https://puter.com/app/roomify-fiwc)
 
-## Features
+## ✨ Highlights
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- 🎨 **AI-Powered Visualization** — Transform basic room photos into stunning 3D renders.
+- 📸 **Interactive Before & After** — Compare designs effortlessly with a draggable slider.
+- ⚡ **Lightning Fast UI** — Built on React 19 & React Router v8 for optimal performance.
+- 💅 **Modern Styling** — Beautiful, responsive design using TailwindCSS v4.
+- 🔄 **Real-Time Render State** — Animated loading and visual cues during image generation.
+- 📱 **Fully Responsive** — Works flawlessly on desktop and mobile devices.
 
-## Environment Variables
+### 🌐 Powered by Puter.js
+This project heavily leverages **[Puter.js](https://puter.com)** for its backend infrastructure, eliminating the need for a traditional server:
+- 🔐 **Puter Auth** — Provides instant, secure authentication and user session management.
+- 🗄️ **Puter Hosting / DB** — Handles storing user data, saving projects, and securely hosting the before/after images in the cloud.
+- ⚙️ **Puter Workers** — Acts as the secure backend API, executing server-side logic and background tasks to process and manage user projects.
 
-Before running the application, copy the `.env.example` file to `.env.local` and fill in the required values:
+## 🛠️ Tech Stack
 
-```bash
-cp .env.example .env.local
-```
+- **Framework:** React Router v8 (React 19)
+- **Styling:** TailwindCSS v4
+- **Backend & Auth:** Puter.js & Puter Workers
+- **Icons:** Lucide React
+- **Components:** React Compare Slider
+- **Language:** TypeScript
+- **Bundler:** Vite
 
-## Getting Started
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have Node.js installed.
 
 ### Installation
 
-Install the dependencies:
+1. Clone the repository and navigate into the directory:
+```bash
+git clone https://github.com/your-username/roomify.git
+cd roomify
+```
 
+2. Install the dependencies:
 ```bash
 npm install
+```
+
+3. Set up Environment Variables:
+Before running the application, copy the `.env.example` file to `.env.local` and fill in the required values (like your Puter Worker URL).
+```bash
+cp .env.example .env.local
 ```
 
 ### Development
 
 Start the development server with HMR:
-
 ```bash
 npm run dev
 ```
 
 Your application will be available at `http://localhost:5173`.
 
-## Building for Production
+## 📦 Building for Production
 
 Create a production build:
-
 ```bash
 npm run build
 ```
 
-## Deployment
+## ☁️ Deployment
 
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Roomify is built to be easily deployed. For a fast cloud deployment, consider using [Puter](https://puter.com/) as the primary hosting and backend solution, or deploy the output of `npm run build` to your favorite static host.
 
 ---
 
-Built with ❤️ using React Router.
+Built with ❤️ using React Router and Puter.js.
