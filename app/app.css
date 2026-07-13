@@ -360,6 +360,7 @@
 
             .spinner {
               @apply w-8 h-8 mb-3 animate-spin text-primary;
+              animation-direction: reverse;
             }
 
             .title {
@@ -409,7 +410,7 @@
         @apply mb-8 inline-flex items-center px-3 py-1 rounded-md bg-white border border-zinc-200 shadow-sm;
 
         .dot {
-          @apply w-4 h-4 rounded bg-blue-100 flex items-center justify-center mr-2 rounded-full;
+          @apply w-4 h-4 bg-blue-100 flex items-center justify-center mr-2 rounded-full;
 
           .pulse {
             @apply w-2 h-2 rounded-full bg-blue-500 animate-pulse;
